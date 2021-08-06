@@ -7,7 +7,8 @@ cd ~/pi-hole
 docker-compose pull
 
 #Restarts necessary containers with newer images
-docker-compose up -d --no-deps
+#docker-compose up -d --no-deps
+docker-compose up -d
 
 #Moves to internet-pi
 cd ..
