@@ -1,6 +1,6 @@
 #Upgrade script to pull and upgrade to the latest container images
 
-#Moves to pi-hole first
+#Moves to the pi-hole directory
 cd ~/pi-hole
 
 #Pulls the latest version
@@ -10,7 +10,7 @@ docker-compose pull
 #docker-compose up -d --no-deps
 docker-compose up -d
 
-#Moves to internet-pi
+#Moves to the internet-pi directory
 cd ..
 cd ~/internet-monitoring
 
@@ -18,7 +18,8 @@ cd ~/internet-monitoring
 docker-compose pull
 
 #Restarts the necessary containers with newer images
-docker-compose up -d --no-deps
+#docker-compose up -d --no-deps
+docker-compose up -d
 
 #Deletes unused/deprecated container images
 #The -f flag is to bypass the prompt for 'yes' or 'no'
