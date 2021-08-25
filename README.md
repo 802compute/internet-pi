@@ -85,7 +85,15 @@ A guide for backing up the configurations and historical data will be posted her
 
 ## Removal
 
-To deprecate and remove Internet-Pi from your device, please run the uninstall.sh script
+To deprecate and remove Internet-Pi from your device, please run the uninstall.sh script or complete the following procedure here:
+
+```bash
+cd ~/internet-monitoring
+docker-compose down -v    #Shuts down internet-monitoring container(s)
+cd ~/pi-hole
+docker-compose down -v    #Shuts down pi-hole container(s)
+docker system prune -f    #Clean up docker
+```
 
 ## License
 
