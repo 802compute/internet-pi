@@ -1,6 +1,7 @@
 #Upgrade script to pull and upgrade to the latest container images
 
-#Moves to pi-hole first
+
+#Moves to the pi-hole directory
 cd ~/pi-hole
 
 #Pulls the latest version
@@ -10,6 +11,9 @@ docker-compose pull
 docker-compose up -d --no-deps
 
 #Moves to internet-monitoring
+docker-compose up -d
+
+#Moves to the internet-pi directory
 cd ..
 cd ~/internet-monitoring
 
